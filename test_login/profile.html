@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="Avatar.png" alt="User  Profile" class="avatar">
+            <p>USERNAME<br><span>Member since M/Y</span></p>
+            <label for="edit-modal-checkbox" class="edit-btn">EDIT</label>
+            <input type="checkbox" id="edit-modal-checkbox">
+            <!-- Modal window -->
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('edit-modal-checkbox').checked = false;">&times;</span>
+                    <h2>Edit Profile</h2>
+                    <form action="#" method="post" onsubmit="document.getElementById('message-checkbox').checked = true;">
+                        <label for="profile-picture">Change Profile Picture:</label>
+                        <input type="file" id="profile-picture" name="profile-picture">
+                        <label for="username">Change Username:</label>
+                        <input type="text" id="username" name="username">
+                        <label for="password">Change Password:</label>
+                        <input type="password" id="password" name="password">
+                        <label for="email">Change Email:</label>
+                        <input type="email" id="email" name="email">
+                        <button type="submit" class="edit-btn">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <button class="home-btn">
+                <a href="homepage.html">Homepage</a>
+            </button>
+            <div class="notifications">
+                <img src="notification.png" alt="Notifications" class="icon">
+                <img src="Avatar.png" alt="Profile" class="avatar small">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="post-section">
+            <h2>POST:</h2>
+            <div class="post">
+                <input type="text" placeholder="Title">
+                <textarea placeholder="Post"></textarea>
+                <div class="post-actions">
+                    <button class="upvote">👍</button>
+                    <button class="downvote">👎</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="comments-section">
+            <h2>COMMENTS:</h2>
+            <div class="comment">
+                <input type="text" placeholder="Title">
+                <textarea placeholder="Comment"></textarea>
+                <div class="comment-actions">
+                    <button class="upvote">👍</button>
+                    <button class="downvote">👎</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Message Popup -->
+    <!--<input type="checkbox" id="message-checkbox">
+    <div class="message-popup">
+        <div class="message-content">
+            <p>Changes have been successfully applied!</p>
+            <label for="message-checkbox" class="close" style="cursor: pointer;">&times; Close</label>
+        </div>
+    </div>
+    
+    <footer>
+        <button class="scroll-up">↑</button>
+    </footer> -->
+</body>
+</html>

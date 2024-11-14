@@ -1,0 +1,21 @@
+/* Part for the admind/MOD, that the report css */
+.report-container {
+    /*style the report container*/
+    border: 2px solid #ccc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    justify-content: start;
+    gap: 30px;
+    border-radius: 20px;
+
+    /*style item in the report-container*/
+    display: flex;
+    align-items: center;
+
+    /*section to customize the font*/
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+

@@ -1,0 +1,358 @@
+body { /*body color of the page */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, rgba(3, 187, 194, 0.813) 0%, rgb(4, 171, 204) 100%);
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  position: absolute; /* Add this line */
+  bottom: 0; /* Add this line */
+  right: 0; /* Add this line */
+  z-index: -1;
+  filter: invert(1)  drop-shadow(5px 2px 10px blue); /* Invert the colors */
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hello-button {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  background-color: rgb(241, 0, 133);
+  color: white;
+  border: none;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 6px double black;
+}
+
+.main-content { /* Main content */
+  display: flex;
+  margin-top: 100px;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 20px;
+}
+
+.create-post {/* create post button */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  background-color: rgb(241, 0, 133);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.About {/* about button */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  background-color: rgb(241, 0, 133);
+  color: white;
+  border: none;
+  padding: 7px;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.Apply{/* Apply button */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    background-color: rgb(241, 0, 133);
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius: 10px;
+    margin-top: 40px;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.category-box {/* setting for the entire category block */
+  margin-top: 50px;
+  background-color:rgba( 255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: -35px;
+  border: 6px double black;
+}
+
+.category-title {
+  transform: skew(-20deg, 0deg);
+  cursor: default;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+#Category-select {
+  margin-bottom: 20px;
+}
+.content-area {
+  flex: 1;
+  padding: 50px;
+}
+
+.actualite {/* setting for the window  */
+  background-color: rgba( 255, 255, 255, 0.5);
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 6px double black;
+}
+
+.actualite-title { /* setting for the title */
+  transform: skew(-20deg, 0deg);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.post {/*setting for the entire post */
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(241, 0, 133);
+  color: aliceblue;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer; 
+}
+.posts-container {
+  max-height: 500px; /* Set a maximum height */
+  margin-top: 20px; /* Optional: Add some space above */
+  border: 0px solid #ccc; /* Optional: Add a border */
+  padding: 10px; /* Optional: Add some padding */
+  overflow-y: auto; /* Optional: Add scrollbars */
+}
+
+.post-title { /* setting for the post title */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+a:visited, a:link, a:active{
+  text-decoration: none;
+  color: white;
+}
+.post:hover{
+  transform: scale(1.005); /* Add this line to zoom in on hover */
+}
+
+.Apply:hover, .About:hover, .create-post:hover{
+  transform: scale(1.05);
+}
+
+.post-stats {/* setting for the gap on the stats */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.stat { /*display the stats on the post */
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  
+}
+
+/* Notification Area */
+
+.notification-dropdown {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: white;
+  border: 2px solid #ccc;
+  z-index: 1;
+  width: auto;
+}
+
+.notification-icon {
+  position: relative; /* Position relative for absolute positioning of dropdown */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.notification-icon:focus-within .notification-dropdown {
+  display: block; /* Show dropdown when notification icon is focused */
+}
+
+.notification-dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.notification-dropdown a:hover {
+  background-color: #f1f1f1; /* Highlight on hover */
+}
+
+/* Dropdown Area */
+
+.notifications {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.notification-icon {
+  width: 30px; /* Set the width of the notification icon */
+  height: 30px; /* Set the height of the notification icon */
+  display: inline-block; /* Align it next to the profile picture */
+  margin-right: 10px; /* Add some space between the icon and profile picture */
+  transition: transform 0.3s ease;
+}
+
+.notification-icon img {
+  width: 100%; /* Make the icon fill the container */
+  height: auto; /* Maintain aspect ratio */
+}
+.notification-dropdown{
+  border-radius: 10%;
+  padding: 10%;
+  margin-left: -120%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-style: italic;
+  animation: fadeIn 0.3s ease-in-out forwards; /* Fade in effect */
+}
+.profile-dropdown{
+  border-radius: 10%;
+  padding: 1px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-style: italic;
+  animation: fadeIn 0.3s ease-in-out forwards; /* Fade in effect */
+}
+.notification-dropdown a:hover, .profile-dropdown a:hover{
+  background-color: #d4d6d4;
+  border-radius: 10%;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+/*Profile section + dropdown */
+.profile-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #e9d5ff;
+  margin-right: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.profile-circle:hover, .notification-icon:hover{
+  transform: scale(1.05); /* Add this line to zoom in on hover */
+}
+.profile-circle img {
+  width: 100%; /* Make the image fill the circle */
+  height: auto; /* Maintain aspect ratio */
+}
+.profile-dropdown {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position it absolutely within the profile circle */
+  background-color: white; /* Background color of the dropdown */
+  border: 1px solid #ccc; /* Border for the dropdown */
+  z-index: 1; /* Ensure it appears above other content */
+  width: auto; /* Auto width */
+}
+
+/* Show the dropdown when the profile circle is focused */
+.profile-circle:focus-within .profile-dropdown {
+  display: block; /* Show dropdown when profile circle is focused */
+}
+
+/* Style for links in the profile dropdown */
+.profile-dropdown a {
+  display: block; /* Make links block elements */
+  padding: 10px; /* Padding for links */
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Text color */
+}
+
+/* Change background color on hover for dropdown links */
+.profile-dropdown a:hover {
+  background-color: #f1f1f1; /* Highlight on hover */
+}
+.option-mod {
+  position: relative; 
+}
+
+.option {
+  cursor: pointer;
+  font-size: 20px; /* Adjust size as needed */
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  margin-top: -50px; /* Space between icon and menu */
+  margin-left: 10px;
+  animation: fadeIn 0.3s ease-in-out forwards; /* Fade in effect */
+}
+
+
+.option-mod:focus-within .dropdown-menu {
+  display: block; /* Show menu on click */
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1; /* Highlight on hover */
+  border-radius: 10px;
+}

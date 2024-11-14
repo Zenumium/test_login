@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>homepage</title>
+  <link href="homepage.css" type="text/css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+</head>
+<body>
+  <!--header for the navigation bar-->
+  <div class="header" role="banner">
+    <button class="hello-button" aria-label="Hello-There button">Hello-There</button>
+    <div class="notifications">
+      <div class="notification-icon" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="notification-dropdown" aria-label="Notification menu">
+        <img src="notification.png" alt="Notification Icon" />
+        <div class="notification-dropdown" id="notification-dropdown" role="menu" aria-live="polite" tabindex="-1">
+          <a href="#" role="menuitem">Placeholder message 1</a>
+          <a href="#" role="menuitem">Placeholder message 2</a>
+          <a href="#" role="menuitem">Placeholder message 3</a>
+        </div>
+      </div>
+      <div class="profile-circle" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="profile-dropdown" aria-label="Profile menu">
+        <img src="Avatar.png" alt="Profile Picture">
+        <div class="profile-dropdown" id="profile-dropdown" role="menu" aria-live="polite" tabindex="-1">
+          <a href="profile.html" role="menuitem">Profile</a>
+          <a href="login.html" role="menuitem">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--this is the main leftsidebar-->
+    <!--main sidebar for the category-->
+  <div class="main-content" role="main">
+    <div class="sidebar" role="complementary" aria-label="Sidebar with post creation and filtering options">
+      <button class="create-post" aria-label="Create a post">Create your post</button>
+      <div class="category-box">
+        <div class="category-title" id="category-title">Category</div>
+        <select name="category-selector" id="Category-select" aria-labelledby="category-title">
+          <option value="">--Please choose an option--</option>
+          <option value="Cat1">placeholder1</option>
+          <option value="Cat2">placeholder2</option>
+          <option value="Cat3">placeholder3</option>
+          <option value="cat4">placeholder4</option>
+          <option value="Cat5">placeholder5</option>
+          <option value="Cat6">placeholder6</option>
+        </select>
+
+        <!--main sidebar for the filter's-->
+        <div class="category-title" id="filter-title" style="margin-top: 20px">Filters</div>
+        <select name="category-selector" id="Filter-select" aria-labelledby="filter-title">
+          <option value="">--Please choose an option--</option>
+          <option value="Cat1">placeholder1</option>
+          <option value="Cat2">placeholder2</option>
+          <option value="Cat3">placeholder3</option>
+          <option value="cat4">placeholder4</option>
+          <option value="Cat5">placeholder5</option>
+          <option value="Cat6">placeholder6</option>
+        </select>
+
+        <!--button to apply the filter-->
+        <button class="Apply" aria-label="Apply filter">Apply filter</button>
+        <!-- <button class="Apply" aria-label="Reset filter">Reset</button> -->
+        <button class="About" aria-label="About page">About page </button>
+      </div>
+    </div>
+
+    <!--That where all the post goes-->
+    <div class="content-area" aria-labelledby="actualite-title">
+      <div class="actualite">
+        <div class="actualite-title" id="actualite-title">ACTUALITE</div>
+        <!--this is the post-container-->
+        <div class="posts-container">
+          <div class="post" role="article" aria-labelledby="post-title-1">
+            <div class="post-content">
+              <div class="post-title" id="post-title-1">
+                <a href="post.png" class="post-link" aria-label="Post Title category-title link">Post Title / category-title</a>
+              </div>
+            </div>
+            <!--display the stat in the post-->
+            <div class="post-stats">
+              <span aria-label="Posted time">H/W/M/Y</span>
+              <span class="stat" aria-label="Views">0 👀</span>
+              <span class="stat" aria-label="Comments">0 💬</span>
+              <span class="stat" aria-label="Likes">0 ❤️</span>
+              <!--give the option to edit or delete the post-->
+              <div class="option-mod">
+                <button class="option" aria-haspopup="true" aria-expanded="false" aria-controls="post-options" aria-label="Post options">⫶</button>
+                <div class="dropdown-menu" id="post-options" role="menu" tabindex="-1">
+                  <a href="#" class="edit-post" role="menuitem">Edit</a>
+                  <a href="#" class="delete-post" role="menuitem">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--that the png in the background-->
+  <div class="image">
+    <img src="astronaute.png" alt="Astronaut image">
+  </div>
+</body>
+</html>
